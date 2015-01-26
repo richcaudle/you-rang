@@ -1,0 +1,32 @@
+div.col-xs-6
+	div(class="panel panel-default")
+		div(class="panel-body", style="background-image:" + settings.parameters.bgimage)
+			h3 #{settings.parameters.placeName}
+			table.table
+				tbody
+					- var h = 0
+					while h < 10 && h < data.hourly.data.length
+						- if (h % 2 == 0)
+
+							- var hour = data.hourly.data[h]
+
+							- var d = (new Date(0))
+							- d.setUTCSeconds(hour.time)
+							- d = d.getHours()+1
+							- if(d < 10) d = "0" + d
+
+							- var temp = Math.round(hour.temperature)
+							- var feelsLike = Math.round(hour.apparentTemperature)
+							- var windSpeed = Math.round(hour.windSpeed * 0.62137)
+
+							tr
+								td #{d}:00
+								td
+									img(src= "/tiles/weather/images/" + hour.icon + ".png", width=20)
+								td
+									span &nbsp; #{temp}&deg;C
+									span &nbsp; (#{feelsLike}&deg;C)&nbsp;&nbsp;&nbsp;
+								td
+									span &nbsp; #{windSpeed} mph
+
+						- h++

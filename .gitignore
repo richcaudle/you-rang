@@ -26,3 +26,10 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# Project files
+settings.json
+notes.txt
+*.pem
+*.p12
+data

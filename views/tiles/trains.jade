@@ -1,0 +1,14 @@
+div.col-xs-6
+	div(class="panel panel-default")
+
+		div.panel-heading #{settings.parameters.from} &gt; #{settings.parameters.to}
+		div.panel-body
+			table.table
+				tbody
+					each train in data
+						tr(class=train.status.class)
+							td #{train.departs}
+							td #{train.arrives}
+							td #{train.duration}
+							td #{train.changes}
+							td #{train.status.text}

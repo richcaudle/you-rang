@@ -1,0 +1,17 @@
+extends layout
+include tiles/weather.jade
+include tiles/trains.jade
+include tiles/calendar.jade
+include tiles/break.jade
+
+block content
+	div.container
+		div.content
+			h1= title
+
+			div.row
+				each tile, index in tiles
+					div(id='tile-'+index)
+						div.col-xs-6
+							div(class="panel panel-default")
+								h4 Waiting for data...

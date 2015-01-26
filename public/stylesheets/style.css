@@ -1,0 +1,7 @@
+h3 {margin-top:0;}
+ul { list-style-type: none; padding: 0;}
+.table {margin:0;}
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 { padding-right: 4px; padding-left: 4px;}
+.panel { min-height: 258px; }
+
+tr.work { background-color: #fcf8e3}

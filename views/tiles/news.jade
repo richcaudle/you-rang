@@ -1,0 +1,9 @@
+div.col-xs-6
+	div(class="panel panel-default")
+		div.panel-heading #{settings.parameters.title}
+		div.panel-body
+			if data
+				ul
+					each story in data
+						li 
+							a(href=story.link, target='_blank') #{story.title}
