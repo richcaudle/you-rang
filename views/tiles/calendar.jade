@@ -1,14 +1,18 @@
 div.col-xs-6
 	div(class="panel panel-default")
-		div.panel-heading Calendar
 		div.panel-body
+			h3 Today's Diary
 			- if (data)
 				- if(data.length > 0)
 					table.table
 						tbody
 							each event in data
 								tr(class=event.calendar)
-									td #{event.start.toLocaleTimeString().replace(/:00$/,"")}
+									td #{event.start.getDate()} / #{event.start.getMonth()+1}
+									- if (event.start.getHours() == 0)
+										td All day
+									-else
+										td #{event.start.toLocaleTimeString().replace(/:00$/,"")}
 									td #{event.summary}
 				- else
 					em No events remaining today

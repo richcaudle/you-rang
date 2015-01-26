@@ -1,7 +1,10 @@
-h3 {margin-top:0;}
+h3 { margin-top:0;}
 ul { list-style-type: none; padding: 0;}
+li { line-height: 2.5em; white-space: nowrap; text-overflow: ellipsis; width: 90%; }
+td { white-space: nowrap; }
+
 .table {margin:0;}
 .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 { padding-right: 4px; padding-left: 4px;}
-.panel { min-height: 258px; }
+.panel { min-height: 258px; overflow: hidden;  }
 
 tr.work { background-color: #fcf8e3}

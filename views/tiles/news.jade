@@ -1,7 +1,8 @@
 div.col-xs-6
 	div(class="panel panel-default")
-		div.panel-heading #{settings.parameters.title}
 		div.panel-body
+			h3 #{settings.parameters.title}
+		
 			if data
 				ul
 					each story in data

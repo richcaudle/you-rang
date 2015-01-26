@@ -1,8 +1,8 @@
 div.col-xs-6
 	div(class="panel panel-default")
-
-		div.panel-heading #{settings.parameters.from} &gt; #{settings.parameters.to}
 		div.panel-body
+			h3 Live Trains (#{settings.parameters.from} &gt; #{settings.parameters.to})
+		
 			table.table
 				tbody
 					each train in data
